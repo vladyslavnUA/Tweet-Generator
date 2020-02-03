@@ -1,0 +1,20 @@
+Espresso
+Ristretto
+Americano
+Cappuccino
+Espresso
+Americano
+Cappuccino
+Macchiato
+Macchiato
+Mocha
+Espresso
+Ristretto
+Americano
+Macchiato
+Mocha
+Ristretto
+Americano
+Macchiato
+Mocha
+Hot Cocoa
