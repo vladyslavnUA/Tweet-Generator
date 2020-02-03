@@ -10,5 +10,3 @@ random.shuffle(anything)
 
 # then print it here
 print(anything)
-
- 
