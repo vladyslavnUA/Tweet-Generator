@@ -6,15 +6,15 @@
 
 from random import randint
 
-def histogram(lines):
+def histogram(some_lines):
     histogram = {}
-    for line in lines:
+    for some_line in some_lines:
         words = line.rstrip('\n').split()
-        for word in words:
-            if word in histogram:
-                histogram[word] += 1
+        for some_word in words:
+            if some_word in histogram:
+                histogram[some_word] += 1
             else:
-                histogram[word] = 1
+                histogram[some_word] = 1
 
     return histogram
 
@@ -34,7 +34,7 @@ def sample(histogram):
             return word
 
 def words_list():
-    filename = './text/adventure_holmes.txt'
+    filename = './histogram/words.txt'
     file = open(filename, 'r')
     lines = file.readlines()
 
@@ -49,10 +49,7 @@ def words_list():
     return words_list
 
 if __name__ == "__main__":
-    file = open('onefix.txt', 'r')
-    lines = file.readlines()
-
-    histogram_result = histogram(lines)
-    print(histogram_result)
-    print(sample(histogram_result))
+    histo_result = histogram(lines)
+    print(histo_result)
+    print(sample(histo_result))
     # print(sample(histogram_result))
