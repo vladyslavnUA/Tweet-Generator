@@ -1,8 +1,8 @@
 # from flask import Flask, render_template, request, redirect, url_for
-# import random
-# from random import randint
+import random
+from random import randint
 # import os
-# import sys
+import sys
 # import dictionary_words
 
 
@@ -12,27 +12,31 @@
 # def index():
 # 	return render_template("home.html")
 
-# some_file = "words.txt"
-# some_lines = open(some_file, "r")
+histoogram = {}
 
 # histoogram = {"one": 2,
 #             "fish": 4, "red": 2, "blue": 2
 #             }
-class Histogram():
+# class Histogram():
 
-    def __init__(self, data):
-        pass
+#     def __init__(self, data):
+#         pass
 
-    def histogram(histoogram):
-        for word in some_lines:
+def histogram():
+
+    some_file = open("words.txt", "r")
+    some_lines = some_file.readlines()
+
+    for line in some_lines:
+        for word in line.split():
             word = word.rstrip()
-        
-            if word in histoogram:
-                histoogram[word] += 1
-            else:
-                histoogram[word] = 1
-        random_index = randint(0, len(histoogram)-2)
-        print(histoogram, random_index)
+    
+        if word in histoogram:
+            histoogram[word] += 1
+        else:
+            histoogram[word] = 1
+    random_index = randint(0, len(histoogram) )
+    print(histoogram, random_index)
 
 def unique_words():
     count = 0
@@ -60,12 +64,12 @@ if __name__ == '__main__':
     print("Histogram: ")
     print(histo_result)
 
-    unique_result = unique_words(histo_result)
+    unique_result = unique_words()
     print("Unique words: ", unique_result)
 
     word="Americano"
 
-    frequency_of_word = frequency(word, histo_result)
+    frequency_of_word = frequency()
 
     print("the word " + word + "appeared " + str(frequency_of_word), "times")
 # 	app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
