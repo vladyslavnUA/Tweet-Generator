@@ -27,3 +27,7 @@ class Dictogram(dict):
             return self[word]
         else:
             return 0
+    
+    def sample(self):
+        tokens = 0
+        for 
