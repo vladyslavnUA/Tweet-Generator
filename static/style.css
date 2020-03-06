@@ -1,0 +1,35 @@
+body {
+    background-color: red;
+}
+
+.words {
+    margin-top: 40px;
+}
+
+blockquote {
+    border:none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom:-30px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote h3 {
+    font-size:26px;
+}
+
+blockquote h3:before {
+    content: open-quote;
+    font-weight: bold;
+    font-size:100px;
+    color:#000000;
+}
+blockquote h3:after {
+    content: close-quote;
+    font-weight: bold;
+    font-size:100px;
+    color:#000000;
+}
+
+.navbar-text {
+    margin: 0 auto;
+}
